@@ -1,15 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
+// app/layout.tsx or app/layout.jsx
 import "./globals.css";
+import Nav from "./components/Nav";
+import Head from "next/head";
+import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -19,10 +13,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={` antialiased`}>
+        <Head>
+        <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+      </Head>
+        <div className="relative min-w-[100vw] bg p-[0.01px] overflow-y-hidden">
+          <Nav />
+          {children}
+          <Footer/>
+        </div>
       </body>
     </html>
   );
