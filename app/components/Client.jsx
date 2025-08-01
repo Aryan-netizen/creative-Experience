@@ -2,23 +2,45 @@ import Image from "next/image";
 import React from "react";
 
 const Client = () => {
+  const clients = [
+    {
+      src: "https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg",
+      alt: "Transistor",
+    },
+    {
+      src: "https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg",
+      alt: "Reform",
+    },
+    {
+      src: "https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg",
+      alt: "Tuple",
+    },
+    {
+      src: "https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg",
+      alt: "SavvyCal",
+    },
+    {
+      src: "https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg",
+      alt: "Statamic",
+    },
+  ];
+
   return (
-    <div>
-      <div className="bg-white">
-  <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-[-8%]">
-    <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" className="col-span-2 max-h-18 w-full object-contain lg:col-span-1" />
-
-      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" className="col-span-2 max-h-18 w-full object-contain lg:col-span-1" />
-
-      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" className="col-span-2 max-h-18 w-full object-contain lg:col-span-1" />
-
-      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" className="col-span-2 max-h-18 w-full object-contain sm:col-start-2 lg:col-span-1" />
-
-      <img width="158" height="48" src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" className="col-span-2 col-start-2 max-h-18 w-full object-contain sm:col-start-auto lg:col-span-1" />
-    </div>
-  </div>
-</div>
+    <div className="bg-white py-10 px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center">
+          {clients.map((client, index) => (
+            <Image
+              key={index}
+              src={client.src}
+              alt={client.alt}
+              width={158}
+              height={48}
+              className="w-full h-auto object-contain max-h-12"
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

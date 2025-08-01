@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <Head>
         <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
       </Head>
-        <div className="relative min-w-[100vw] bg p-[0.01px] overflow-y-hidden">
+        <div className="relative bg overflow-y-hidden">
           <Nav />
           {children}
           <Footer/>
