@@ -1,10 +1,9 @@
 import React from 'react'
-import Hero from './components/Hero'
-import Client from './components/Client'
-import Card from './components/Card'
-import Cta from './components/Cta'
-
-const page = () => {
+import Hero from './components/Home/Hero'
+import Client from './components/Home/Client'
+import Card from './components/Home/Card'
+import Cta from './components/Home/Cta'
+const Home = () => {
   return (
     <div className='h-fit w-full'>
       <div>
@@ -17,4 +16,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Home

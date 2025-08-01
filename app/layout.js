@@ -1,8 +1,8 @@
 // app/layout.tsx or app/layout.jsx
 import "./globals.css";
-import Nav from "./components/Nav";
+import Nav from "./components/Global/Nav";
 import Head from "next/head";
-import Footer from "./components/Footer";
+import Footer from "./components/Global/Footer";
 
 
 export const metadata = {
