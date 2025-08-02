@@ -2,10 +2,10 @@ import React from 'react'
 
 const MainContent = () => {
   return (
-    <div className="relative w-full flex flex-col justify-center items-center px-6 sm:px-10 lg:px-[80px] pt-20 lg:pt-[100px] overflow-hidden">
-      <h1 className="text-4xl md:text-5xl font-bold">Price Plan</h1>
-      <p className="text-lg sm:text-xl lg:text-2xl mt-6 sm:mt-15 text-center leading-relaxed text-gray-400">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br className="hidden sm:block" />
+    <div className="relative w-full flex flex-col justify-center items-center px-4 sm:px-8 md:px-12 lg:px-20 pt-16 md:pt-24 lg:pt-28 overflow-hidden text-center">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Price Plan</h1>
+      <p className="text-base sm:text-lg md:text-xl lg:text-2xl mt-4 sm:mt-6 text-gray-500 leading-relaxed max-w-3xl">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         Lorem Ipsum has been.
       </p>
     </div>

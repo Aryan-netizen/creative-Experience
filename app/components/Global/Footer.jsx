@@ -24,30 +24,36 @@ const Footer = () => {
             </a>
 
             {/* Social Links */}
-            <div className="flex gap-4 mt-4">
-              <a href="#" className="text-gray-500 hover:text-gray-900">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 8 19">
-                  <path
-                    fillRule="evenodd"
-                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </a>
-              <a href="#" className="text-gray-500 hover:text-gray-900">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 21 16">
-                  <path d="M16.942 1.556a16.3...Z" />
-                </svg>
-              </a>
-              <a href="#" className="text-gray-500 hover:text-gray-900">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 17">
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M20 1.892a8.178...Z"
-                  />
-                </svg>
-              </a>
+            <div className="flex ml-[-20px] mt-2">
+              <Image
+                      src="/face.svg"
+                      width={0}
+                      height={0}
+                      className="w-[136px] h-[37.13px]  "
+                      alt="Logo"
+                    />
+              <Image
+                      src="/X.svg"
+                      width={0}
+                      height={0}
+                      className="w-[136px] h-[37.13px]  "
+                      alt="Logo"
+                    />
+              <Image
+                      src="/linkedin.svg"
+                      width={0}
+                      height={0}
+                      className="w-[136px] h-[37.13px]  "
+                      alt="Logo"
+                    />
+              <Image
+                      src="/insta.svg"
+                      width={0}
+                      height={0}
+                      className="w-[136px] h-[37.13px] "
+                      alt="Logo"
+                    />
+             
             </div>
           </div>
 

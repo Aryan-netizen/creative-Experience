@@ -30,3 +30,6 @@ body {
   background-repeat: no-repeat;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;         
+}

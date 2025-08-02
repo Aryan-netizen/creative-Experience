@@ -2,62 +2,65 @@ import Image from "next/image";
 import React from "react";
 
 const PriceCard = () => {
+  const plans = ["Standard Plan", "Premium Plan", "Platinum Plan"];
+  const features = [
+    "Single-page website or landing page.",
+    "Free domain & hosting (1 year)",
+    "Responsive design",
+    "Basic SEO setup",
+    "Contact form",
+    "Google Maps integration",
+  ];
+
   return (
-    <div>
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-          {/* <!-- Pricing Card --> */}
-          {["Standard Plans","Premium Plan","Platinum Plan"].map((elem)=>(
-            <div className="flex flex-col mx-auto max-w-lg text-gray-900 stroke-4 stroke-orange-50 drop-shadow-2xl rounded-[40px] bg-white  ">
-            <div className="flex flex-col p-[32px] gap-10">
-              <h3 className="text-2xl font-semibold">{elem}</h3>
-              <div className="flex justify-start items-baseline">
-                <span className="mr-2 text-6xl font-bold">$29</span>
-                <span className="text-gray-500 ">/month</span>
-              </div>
-              <p className="font-light text-gray-500 text-md ">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-              <div>
-                <button className="bg-[#FBFBFE] drop-shadow-md text-black px-8 py-4 border-2 border-muted rounded-xl w-full mx-auto lg:mx-0 font-bold">
+    <div className="py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-between rounded-[40px] drop-shadow-2xl stroke-4 stroke-orange-50 bg-white overflow-hidden"
+            >
+              {/* Top section */}
+              <div className="flex flex-col p-8 gap-6">
+                <h3 className="text-2xl font-semibold">{plan}</h3>
+                <div className="flex items-baseline">
+                  <span className="mr-2 text-5xl font-bold">$29</span>
+                  <span className="text-gray-500">/month</span>
+                </div>
+                <p className="font-light text-gray-500 text-base">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+                <button className="bg-[#FBFBFE] border-2 border-muted drop-shadow-md text-black px-6 py-3 rounded-xl w-full font-bold">
                   Get Started
                 </button>
               </div>
-            </div>
-            <hr className="border-gray-300" />
 
-            <div className="p-[32px]">
-              <h1 className="text-xl font-semibold">Features</h1>
-              <p className="font-light text-gray-500 text-md mt-2">
-                Everything in Business Plan, plus:
-              </p>
-              {/* <!-- List --> */}
-              <ul role="list" className="mt-8 space-y-4 text-left">
-                {[
-                  " Single-page website or landing page.",
-                  "Free domain & hosting(1 year)",
-                  " Responsive design",
-                  "Basic SEO setup",
-                  "Contactform",
-                  "Google Maps integration ",
-                ].map((elem) => (
-                  <li className="flex items-center space-x-3">
-                    {/* <!-- Icon --> */}
-                    <Image
-                            src="/check.png"
-                            width={0}
-                            height={0}
-                            className="w-5"
-                            alt="Logo"
-                          />
+              {/* Divider */}
+              <hr className="border-gray-200" />
 
-                    <span className="font-light text-gray-500 text-md ">{elem}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Bottom section */}
+              <div className="p-8">
+                <h4 className="text-xl font-semibold">Features</h4>
+                <p className="text-gray-500 text-sm mt-2">
+                  Everything in Business Plan, plus:
+                </p>
+                <ul className="mt-6 space-y-4">
+                  {features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center space-x-3">
+                      <Image
+                        src="/check.png"
+                        alt="Check"
+                        width={20}
+                        height={20}
+                        className="object-contain"
+                      />
+                      <span className="text-gray-500 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
           ))}
         </div>
       </div>
