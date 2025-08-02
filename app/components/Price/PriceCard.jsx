@@ -13,47 +13,45 @@ const PriceCard = () => {
   ];
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8">
+    <div className="py-10 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between rounded-[40px] drop-shadow-2xl stroke-4 stroke-orange-50 bg-white overflow-hidden"
+              className="flex flex-col justify-between bg-white rounded-3xl shadow-lg overflow-hidden p-6 sm:p-6 md:p-8"
             >
-              {/* Top section */}
-              <div className="flex flex-col p-8 gap-6">
-                <h3 className="text-2xl font-semibold">{plan}</h3>
+              {/* Top */}
+              <div className="flex flex-col gap-4">
+                <h3 className="text-xl sm:text-2xl font-semibold">{plan}</h3>
                 <div className="flex items-baseline">
-                  <span className="mr-2 text-5xl font-bold">$29</span>
-                  <span className="text-gray-500">/month</span>
+                  <span className="mr-2 text-4xl sm:text-5xl font-bold">$29</span>
+                  <span className="text-gray-500 text-sm">/month</span>
                 </div>
-                <p className="font-light text-gray-500 text-base">
+                <p className="text-gray-500 text-sm sm:text-base">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
-                <button className="bg-[#FBFBFE] border-2 border-muted drop-shadow-md text-black px-6 py-3 rounded-xl w-full font-bold">
+                <button className="bg-[#FBFBFE] border border-gray-200 text-sm sm:text-base drop-shadow px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-bold">
                   Get Started
                 </button>
               </div>
 
               {/* Divider */}
-              <hr className="border-gray-200" />
+              <hr className="my-5 border-gray-200" />
 
-              {/* Bottom section */}
-              <div className="p-8">
-                <h4 className="text-xl font-semibold">Features</h4>
-                <p className="text-gray-500 text-sm mt-2">
-                  Everything in Business Plan, plus:
-                </p>
-                <ul className="mt-6 space-y-4">
+              {/* Bottom */}
+              <div>
+                <h4 className="text-lg sm:text-xl font-semibold">Features</h4>
+                <p className="text-gray-500 text-sm mt-1">Everything in Business Plan, plus:</p>
+                <ul className="mt-4 space-y-3">
                   {features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center space-x-3">
+                    <li key={idx} className="flex items-start space-x-2">
                       <Image
                         src="/check.png"
                         alt="Check"
-                        width={20}
-                        height={20}
-                        className="object-contain"
+                        width={16}
+                        height={16}
+                        className="mt-1"
                       />
                       <span className="text-gray-500 text-sm">{feature}</span>
                     </li>
